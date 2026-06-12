@@ -6,7 +6,15 @@ Este repositorio contiene el script de automatización de pruebas de
 carga del servicio de Login utilizando JMeter.
 
 --------------------------------------------------------------------
-1. RESUMEN DE RESULTADOS
+1. TECNOLOGÍAS Y VERSIONES UTILIZADAS
+--------------------------------------------------------------------
+- Herramienta: Apache JMeter v5.6.3
+- Entorno de Ejecución: Java Runtime Environment Homebrew / JDK version "17.0.19"
+- Sistema Operativo de Prueba: macOS
+- Gestión de Datos: Archivo de texto plano delimitado por comas (.csv)
+
+--------------------------------------------------------------------
+2. RESUMEN DE RESULTADOS
 --------------------------------------------------------------------
 - Usuarios Concurrentes: 15
 - Rendimiento Promedio Alcanzado: 39.4 TPS (Meta original: 20 TPS)
@@ -16,7 +24,7 @@ carga del servicio de Login utilizando JMeter.
 - Duración del Test Sostenido: 17 minutos y 39 segundos
 
 --------------------------------------------------------------------
-2. INSTRUCCIONES PARA LA EJECUCIÓN DEL SCRIPT
+3. INSTRUCCIONES PARA LA EJECUCIÓN DEL SCRIPT
 --------------------------------------------------------------------
 Script 'Servicios Login Ejercicio1.jmx':
 
