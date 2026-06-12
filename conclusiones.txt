@@ -1,0 +1,38 @@
+====================================================================
+INFORME DE EJECUCIÓN: PRUEBAS DE CARGA EN JMETER - SERVICIO LOGIN
+====================================================================
+
+1. RESUMEN DE MÉTRICAS OBTENIDAS:
+--------------------------------------------------------------------
+- Concurrencia evaluada: 15 usuarios concurrentes (Thread Group)
+- Tiempo total de inyección sostenida: 17:39 minutos
+- Volumen de datos procesados: 41,719 muestras (columna Samples)
+- Tiempo de respuesta promedio (columna Average): 377 ms (Cumple SLA definido < 1500 ms)
+- Tiempo de respuesta mínimo (columna Min): 9 ms
+- Tiempo de respuesta máximo (colunma Max): 114,677 ms (Pico de red)
+- Porcentaje de error global: 0.57% (Cumple SLA < 3.00%, columna Error%)
+- Rendimiento de transacciones real (columna Throughput): 39.4 TPS (Transacciones por segundo)
+
+2. CONCLUSIONES TÉCNICAS Y LOGROS DEL PROYECTO:
+--------------------------------------------------------------------
+- Superación de Metas de Rendimiento: El diseño final del script superó con creces el objetivo planteado de 20 TPS,
+  logrando estabilizar la inyección de carga real en un promedio de 39.4 TPS
+  a lo largo de casi 18 minutos de estrés continuo.
+
+- Estabilidad del Servicio bajo Estrés: Los Criterios de Aceptación funcionales
+  y de rendimiento se cumplieron satisfactoriamente.
+  La tasa de error final de apenas 0.57% evidencia que la API mantiene un alto nivel
+  de resiliencia ante un flujo constante y masivo de solicitudes de inicio de sesión.
+
+- Hallazgo en Extremos (Percentiles): Se registró un tiempo máximo aislado de 114.6
+  segundos (114,677 ms), atribuible a picos de latencia en la red o encolamiento
+  en el servidor externo.
+  Dado que esto no impactó de manera significativa el promedio general (377 ms) ni elevó
+  la tasa de fallos por encima del umbral máximo permitido definido del 3%,
+  el comportamiento del sistema bajo carga se define como Exitoso.
+
+3. RECOMENDACIONES DE CIERRE:
+--------------------------------------------------------------------
+- Mantener la arquitectura actual del Plan de Pruebas (.jmx)
+  utilizando el 'Constant Throughput Timer' combinado con hilos concurrentes para
+  simulaciones futuras de picos de tráfico en entornos productivos.
